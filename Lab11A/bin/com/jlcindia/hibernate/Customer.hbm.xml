@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+        
+<!--  1. Mapping table and persistence class with hibernate  -->
+
+<hibernate-mapping package="com.jlcindia.hibernate">
+<class name="Customer" table ="mycustomers">
+<id name="cid" column="cid" type="int">  
+<generator class ="increment" />
+</id>
+<property name="firstName" column="firstName"/>
+<property name="lastName" column="lastName" />
+<property name="phone" column="phone" />
+<property name ="email" column="eamil"/>
+<many-to-one name="address" class="Address" column="aid"/>
+</class>
+</hibernate-mapping>

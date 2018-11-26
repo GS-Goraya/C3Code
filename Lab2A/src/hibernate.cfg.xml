@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+    
+<!--         1. database info.  -->
+         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/jlcindiadb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">guri</property>
+        
+<!--         2.dialect tells Hibernate to generate the appropriate SQL statements for the chosen database. --> 
+         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+           
+<!--         3. showing sql query on console which is genrated by hibernate  -->
+         <property name="show_sql">true</property>
+<!--          <property name="hbm2ddl.auto">create</property> -->
+<!--          4. Mapping info( you can Map Document or class ) -->
+        <mapping class="com.jlcindia.hibernate.Customer"/>
+    </session-factory>
+
+</hibernate-configuration>

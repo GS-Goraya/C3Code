@@ -1,0 +1,32 @@
+
+public class lab571 {
+
+	public static void main(String[] args)throws StudentNotFoundException {
+		// TODO Auto-generated method stub
+  System.out.println("main starts");
+  
+	   StudentService serv=new StudentService();
+	   serv.equals(null);
+  System.out.println("main () ends");
+	}
+}
+
+class StudentService 
+{
+	String getNameBySid(String sid) throws StudentNotFoundException
+	{
+		if(sid==null ||sid.isEmpty()||! sid.equals("JLC-099"))
+			 throw new StudentNotFoundException(sid);
+		else
+			return "Srinivas";
+	}
+}
+class StudentNotFoundException extends Exception 
+{
+  StudentNotFoundException(String sid)
+  {
+	  super(sid);
+  }
+}
+
+
