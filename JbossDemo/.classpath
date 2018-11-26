@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="H:/SOFT/JLC Soft CD/Student DVD/jboss-4.2.2.GA/client/jbossall-client.jar"/>
+	<classpathentry kind="lib" path="H:/SOFT/JLC Soft CD/Student DVD/jboss-4.2.2.GA/client/jboss-client.jar"/>
+	<classpathentry kind="lib" path="H:/SOFT/JLC Soft CD/Student DVD/jboss-4.2.2.GA/client/jboss-common-client.jar"/>
+	<classpathentry kind="lib" path="H:/SOFT/JLC Soft CD/Student DVD/jboss-4.2.2.GA/server/default/lib/jnpserver.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
