@@ -1,0 +1,5 @@
+com\jlcindia\spring\jlcConfig.class
+com\jlcindia\spring\SpringSecurityInitializer.class
+com\jlcindia\spring\SecurityConfig.class
+com\jlcindia\spring\UserController.class
+com\jlcindia\spring\JlcWebApplicationInitializer.class

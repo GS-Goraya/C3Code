@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+<!-- step 1:- configuring your spring bean -->
+
+   <bean id = "aobj" class = "com.jlcindia.spring.A">
+      <property name = "a" value = "99"/>
+      <property name = "msg" value = "Hello guys"/>
+   </bean>
+   <bean id = "bobj" class = "com.jlcindia.spring.B">
+    <constructor-arg value="88"/>
+     <constructor-arg value="Hai Guys"/>
+   </bean>
+   <bean id = "hello" class = "com.jlcindia.spring.hello">
+ <property name="aobj" ref="aobj"/>  <!--     It is intializing to public void setAobj(A aobj) -->
+     <constructor-arg ref="bobj"/>    <!--     It is intializing to public hello (B bobj) -->         
+   </bean>
+</beans>

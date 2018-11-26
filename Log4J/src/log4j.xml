@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+//SIMPLE DOM CONFIGURATOR
+<!-- <log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'> -->
+<!-- 	<appender name="stdout" class="org.apache.log4j.ConsoleAppender"> -->
+<!-- 		<layout class="org.apache.log4j.PatternLayout"> -->
+<!-- 			<param name="ConversionPattern" value="%d''%C''%p''%c''%M''%m''%l'%n"/> -->
+<!-- 		</layout> -->
+<!-- 	</appender> -->
+<!-- 	<root> -->
+<!-- 		<level value="debug" /> -->
+<!-- 		<appender-ref ref="stdout" /> -->
+<!-- 	</root> -->
+<!-- </log4j:configuration> -->
+
+
+//USING DOMCONFIGURATOR(MULTIPLE APPENDERS FILE AND CONSOLE BOTH)
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d''%C''%p''%c''%M''%m''%l'%n"/>
+		</layout>
+	</appender>
+	<appender name="jlc" class="org.apache.log4j.FileAppender">
+
+			<param name="File" value="jlc.log"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d''%C''%p''%c''%M''%m''%l'%n"/>
+		</layout>
+	</appender>
+	
+	<root>
+		<level value="debug" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="jlc" />	
+	</root>
+</log4j:configuration>
