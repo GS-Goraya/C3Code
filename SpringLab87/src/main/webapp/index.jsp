@@ -3,6 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	
+	<link type="text/css"
+		  rel="stylesheet"
+		  href="${pageContext.request.contextPath}/resources/css/style.css">
+
+	<link type="text/css"
+		  rel="stylesheet"
+		  href="${pageContext.request.contextPath}/resources/css/add-customer-style.css">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>

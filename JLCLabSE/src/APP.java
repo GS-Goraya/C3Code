@@ -1,13 +1,17 @@
-class APP{
-public static void main(String args[])
-{
-  String st="hello";
-  String rev="";
-  int n=st.length();
- for( int i= n-1;i>=0;i--)
- {
-	rev=rev+st.charAt(i);
- }
-System.out.println(rev);
-
-}}
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.TreeSet;
+class APP {
+public static void main(String[] args) {
+	 ArrayList namesList = new ArrayList();
+	     namesList.add("aaa");
+	     namesList.add("bbb");
+	     namesList.add("ccc");
+	     namesList.add("ddd");
+     
+	 for(int i = 0; i < namesList.size(); i++)
+	 {
+	     System.out.println(namesList.get(i));
+	 }
+}
+}

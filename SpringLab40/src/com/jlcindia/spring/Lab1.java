@@ -10,6 +10,5 @@ public static void main(String[] args) {
 	TestBean tb=(TestBean)ctx.getBean("testBean");
 	tb.showEnglish();
 	tb.showHindi();
-	
 }
 }

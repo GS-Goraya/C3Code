@@ -10,7 +10,7 @@ static SessionFactory factory;   //singleton object of sessionFactory if it crea
 static {
 	
 	Configuration  cfg=new Configuration ();
-	cfg=cfg.configure();
+	cfg=cfg.configure(); // It will identifies hibernate.cfg.xml document. If hibernate.cfg not then session factory create will be failed.
 	StandardServiceRegistryBuilder ssrbuilder =new StandardServiceRegistryBuilder();
 	StandardServiceRegistry ssRegistry=ssrbuilder.applySettings(cfg.getProperties()).build();
   factory=cfg.buildSessionFactory(ssRegistry);
