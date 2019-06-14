@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jlcindia</groupId>
-  <artifactId>SpringLab89</artifactId>
+  <artifactId>SpringLab87</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>SpringLab89 Maven Webapp</name>
+  <name>SpringLab87 Maven Webapp</name>
   <url>http://maven.apache.org</url>
  <properties>
 		<java-version>1.8</java-version>
@@ -15,6 +15,14 @@
 		<hibernate.version>4.3.5.Final</hibernate.version>
 	</properties>
 	<dependencies>
+	
+ 
+<dependency>
+  <groupId>org.hibernate</groupId>
+  <artifactId>hibernate-validator</artifactId>
+  <version>6.0.13.Final</version>
+</dependency>
+	
 	<dependency>
     <groupId>taglibs</groupId>
     <artifactId>standard</artifactId>
@@ -165,10 +173,17 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>2.25.1</version>
+    <scope>test</scope>
+</dependency>
+		
 
 	</dependencies>
   <build>
-    <finalName>SpringLab89</finalName>
+    <finalName>SpringLab87</finalName>
     <plugins>
 
 			<plugin>
@@ -177,7 +192,7 @@
 				<version>2.2</version>
 				<configuration>
 					<port>8888</port>
-					<path>/SpringLab89</path>
+					<path>/SpringLab87</path>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Customer {
     @Id   //In annotation hibernate will not generate PK. It will used DB based algo for PK. genrate.
           // But in XML we have clearly mentioned <genrator class="increment"/>
-    @GeneratedValue(strategy=GenerationType.AUTO) //It based on DB algo.
+    @GeneratedValue(strategy=GenerationType.AUTO  ) //It based on DB algo.
      @Column(name="cid")
 	private int cid;
     @Column(name="cname")

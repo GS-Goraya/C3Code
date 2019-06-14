@@ -8,7 +8,9 @@ public class Customer {
 	private long phone;
 	private  String city;
 	private double bal;
-	public Customer() {}   //while reading of an object from db internally hibernate creates and obj of persistance class by calling default constructor.if there is no default const in a class then its obj cannt loaded from db.
+//	public Customer() {}   //while reading of an object from db internally hibernate creates and
+	//obj of persistance class by calling default constructor.
+	//if there is no default const in a class then its obj cannt loaded from db.
 	public Customer(String cname, String email, long phone,String city, double bal) {
 		// TODO Auto-generated constructor stub
 		this.cname=cname;

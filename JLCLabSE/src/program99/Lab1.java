@@ -3,16 +3,27 @@ package program99;
 import java.util.Scanner;
 
 public class Lab1 {
-public static void main(String[] args) {
-	Scanner sc=new Scanner(System.in);
-	System.out.println("Enter a and b value");
-	int a=sc.nextInt();
-	int b=sc.nextInt();
-	System.out.println("Before swap \na="+a +"\nb="+b);
-	a=a+b;
-	b=a-b;
-	a=a-b;
-	System.out.println("After swap \na ="+a+"\nb="+b);
+
+	public static void main(String[] args) {
+		int a[]= {14,12,56,52,88};
+		int b[]= {140,120,560,520,100};
+		 for(int i=0;i<=b.length;i++)
+		 {
+			 a[i]= a[i]+b[i];
+			 b[i]=a[i]-b[i];
+			 a[i]=a[i]-b[i]; 
+		 }
+		 for(int s:a)
+		 {
+			 System.out.print(s);
+			 
+		 }
+		 for(int d:b)
+		 {
+			 System.out.print(d);
+			 
+		 }
 	
-}
+	}
+
 }

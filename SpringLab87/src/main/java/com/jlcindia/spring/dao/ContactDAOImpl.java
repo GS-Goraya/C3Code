@@ -3,6 +3,10 @@ package com.jlcindia.spring.dao;
 import java.util.ArrayList;
 import java.util.List;
 import javax.transaction.Transactional;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -21,7 +25,8 @@ public class ContactDAOImpl<ContactTo> implements ContactDAO {
 		contact.setContactName(cto.getContactName());
 		contact.setContactEmail(cto.getContactEmail());
 		contact.setContactPhone(cto.getContactPhone());
-		hTemp.save(contact);
+		contact.setContactId(cto.getContactId());
+		hTemp.saveOrUpdate(contact);
 		return true;
 
 	}
@@ -44,5 +49,31 @@ public class ContactDAOImpl<ContactTo> implements ContactDAO {
 
 		return cList;
 	}
+	@Override
+	public void deleteContact(int theId) {	
+		// delete object with primary key
+		SessionFactory  sf=hTemp.getSessionFactory();
 
-}
+		// get the current hibernate session
+		Session currentSession = sf.getCurrentSession();
+	
+		// delete object with primary key
+		Query theQuery = 
+				currentSession.createQuery("delete from Contact where id=:contactId");
+		theQuery.setParameter("contactId", theId);
+		theQuery.executeUpdate();
+	}
+
+	@Override
+	public Contact getContact(int theId) {
+		SessionFactory  sf=hTemp.getSessionFactory();
+		// get the current hibernate session
+		Session currentSession = sf.getCurrentSession();
+		Contact theContact=(Contact) currentSession.get(Contact.class, theId);
+		return theContact;	
+	}
+
+
+	}
+	
+

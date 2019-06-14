@@ -17,6 +17,7 @@ public class Lab3 {
 			a=a^b;
 			b=carry<<1;
 		}
+		System.out.println("sum is :" +a);
 	}
 
 }
