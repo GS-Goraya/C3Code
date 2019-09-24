@@ -6,6 +6,7 @@ public class Lab10 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
     int sum=0;
 	Scanner sc=new Scanner(System.in);
 	   int n=sc.nextInt();
@@ -21,3 +22,4 @@ public class Lab10 {
 	}
 
 }
+

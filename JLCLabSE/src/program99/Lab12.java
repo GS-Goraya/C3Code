@@ -12,6 +12,7 @@ public class Lab12 {
       for(int i=0;i<=even;i++)
     	  if(i%2==0)
     		  System.out.println("This is even nummber "+i);
+	
 	}
 
 }

@@ -12,8 +12,7 @@ public class Lab11 {
 	  for(int i=0; i<=n;i++)
 		  if(i%2!=0)
 			  sum=i+sum;
-		 System.out.println("Sum of odd number is "+sum);	  
-			  
+		 System.out.println("Sum of odd number is "+sum);	  		  
 	}
 
 }

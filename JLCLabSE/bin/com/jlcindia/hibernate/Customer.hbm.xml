@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.jlcindia.hibernate">
+<class name="Customer" table ="customers">
+<id name="cid" column="cid" type="int">
+<generator class ="increment" />
+</id>
+<property name="cname"/>
+<property name="email" column="email"/>
+<property name="phone" column="phone" type="long"/>
+<property name="city" column="city" type="String"/>
+<property name ="bal " column="bal" type="double"/>
+</class>
+</hibernate-mapping>
